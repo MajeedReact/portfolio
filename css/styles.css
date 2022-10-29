@@ -1,0 +1,421 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+/* ---- Base Rules ---- */
+body {
+  background: rgb(136, 203, 171);
+  background: linear-gradient(
+    0deg,
+    rgba(119, 141, 169, 1) 0%,
+    rgba(13, 27, 42, 1) 100%
+  );
+  margin: 0;
+  font-family: "Merriweather", serif;
+  color: #fff;
+}
+.divider {
+  height: 2px;
+  width: 30%;
+  background-color: #d9d9d9;
+}
+#project-header {
+  text-align: center;
+}
+
+.project-1-title {
+  margin-right: 0.5em;
+  width: fit-content;
+  height: fit-content;
+  background-color: #253547;
+  background-color: linear-gradient(
+    0deg,
+    rgba(37, 53, 71, 1) 0%,
+    rgba(78, 95, 117, 1) 100%
+  );
+  padding: 1.2em 1.5em;
+  border-radius: 0.5em;
+}
+
+.project-1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-stack {
+  margin-top: 1.5em;
+  color: lightgray;
+  opacity: 0.5;
+}
+p {
+  font-family: Inter, sans-serif;
+}
+
+#section1 {
+  margin-top: 5em;
+}
+
+#section2 h2 {
+  border: none;
+}
+
+.stack-container {
+  background-color: #253547;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  border-radius: 20px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+.stack-container img {
+  margin: 1em 1em;
+}
+
+.social-link {
+  text-align: center;
+  width: max-content;
+  margin: 2.5em 3.5em;
+}
+.socials-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about-me-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+/* Typeography General*/
+h1 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 3em;
+  margin: 2em 1rem;
+}
+
+@media only screen and (min-width: 35em) {
+  h1 {
+    /* font-size: 7em; */
+    margin: 2em 4rem 1em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .about-me-content img {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .project-1 {
+    flex-wrap: wrap;
+  }
+  .project-1-title {
+    width: fit-content;
+    height: fit-content;
+    background-color: #253547;
+    padding: 1.2em 1.2em;
+    border-radius: 0.5em;
+  }
+}
+h2 {
+  font-family: "Hind", Sans-Serif;
+  font-size: 3em;
+  color: #fff;
+  margin: 0;
+}
+
+p {
+  line-height: 1.6em;
+  color: #eee;
+}
+
+/* ---- Layout Rules ---- */
+main {
+  margin: 1em 10vh;
+}
+
+.main-hero {
+  min-height: 40vh;
+  padding-top: 3em;
+}
+
+section {
+  position: relative;
+  min-height: 80vh;
+}
+
+/* ---- Module Rules ---- */
+
+/* Navigation Styles*/
+.navbar__menu ul {
+  padding-left: 0;
+  margin: 1em 0;
+  text-align: center;
+  color: black;
+}
+
+.navbar__menu li {
+  display: inline-block;
+}
+
+/* hide hamburger icon when page are big enough */
+.hamburger {
+  display: none;
+}
+/* .navbar__menu li:hover {
+} */
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo-container {
+  padding: 1.2em 1.5em;
+  display: flex;
+  justify-content: start;
+}
+.logo {
+  font-size: 2em;
+  margin: 0 0;
+  color: #e0e1dd;
+  font-family: "Hind", sans-serif;
+}
+.navbar__menu .menu__link {
+  display: block;
+  margin: 0 1em;
+  font-family: "Inter", Sans-Serif;
+  color: #e0e1dd;
+  text-decoration: none;
+}
+
+.navbar__menu .menu__link:hover {
+  border-top-right-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+  background-color: #778da9;
+  cursor: pointer;
+  color: #0d1b2a;
+  padding: 0.5em 1em;
+  transition: ease 0.3s all;
+}
+
+/* Header Styles */
+.page__header {
+  background: #0d1b2a;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+/* Footer Styles */
+.page__footer {
+  background: #000;
+  padding: 3em;
+  color: #fff;
+}
+
+.page__footer p {
+  color: #fff;
+}
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.landing__container {
+  padding: 1em;
+  text-align: left;
+}
+
+@media only screen and (min-width: 35em) {
+  .landing__container {
+    max-width: 80%;
+    padding: 4em;
+  }
+}
+
+section:nth-of-type(even) .landing__container {
+  margin-right: 0;
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Background Circles */
+/* Note that background circles are created with psuedo elements before and after */
+/* Circles appear to be random do to use of :nth-of-type psuedo class */
+section:nth-of-type(odd) .landing__container::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.187);
+  position: absolute;
+  z-index: -5;
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .landing__container::before {
+  content: "";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  position: absolute;
+  top: 3em;
+  right: 3em;
+  z-index: -5;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n) .landing__container::after {
+  content: "";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -5;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n + 1) .landing__container::after {
+  content: "";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  position: absolute;
+  right: 20vw;
+  bottom: -5em;
+  z-index: -5;
+  width: 15vh;
+  height: 15vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+}
+
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+.navbar__menu li.active {
+  border-top-right-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+  background-color: #778da9;
+  cursor: pointer;
+  color: #0d1b2a;
+  padding: 0.5em 1em;
+}
+
+section.your-active-class {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+section.your-active-class {
+  animation: sectionAnimation 2s linear;
+}
+
+section.your-active-class .landing__container::before {
+  opacity: 1;
+  animation: rotate 4s linear 0s infinite forwards;
+}
+
+section.your-active-class .landing__container::after {
+  opacity: 1;
+  animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+/* Section Active Styles Keyframe Animations */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) translate(-1em) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-1em) rotate(-360deg);
+  }
+}
+@keyframes sectionAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 635px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: #eee;
+    margin: 6px 6px;
+  }
+
+  #navbar__list {
+    /* display: none; */
+    flex-direction: column;
+    height: 0;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #0d1b2a;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+  #navbar__list.active {
+    height: 480px;
+  }
+  .navbar__menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 80px auto;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .navbar__menu ul.active {
+    opacity: 1;
+  }
+
+  .navbar__menu ul li {
+    margin: 1.5em 0;
+    width: fit-content;
+  }
+}

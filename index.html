@@ -1,0 +1,136 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Manipulating the DOM</title>
+    <!-- Load Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Styles -->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+    <header class="page__header">
+      <nav class="navbar__menu">
+        <div class="logo-container">
+          <h1 class="logo">Majeed</h1>
+        </div>
+
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul id="navbar__list"></ul>
+        <!-- hamburger icon -->
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <header class="main__hero"></header>
+      <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+      <section id="section1" data-nav="About Me">
+        <div class="landing__container">
+          <h2>About Me</h2>
+          <div class="divider"></div>
+          <div class="about-me-content">
+            <p>
+              Currently a senior IT Student at King Abdulaziz University,
+              Intersted in Full Stack Development and Software Engineering
+              related field.
+              <br />
+              <br />
+              I am a very passionate person about technology, innovation and
+              challenges. I am a driven problem solver, who loves finding
+              challenges and learning new things about Software Engineering.
+            </p>
+
+            <p></p>
+            <img
+              src="./images/Code typing-bro.svg"
+              width="30%"
+              alt="an image of person coding"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="section2" data-nav="My Stack">
+        <div class="landing__container">
+          <h2>My Stack</h2>
+          <p>Here are a few technologies I have been working with recently</p>
+
+          <div class="stack-container">
+            <img src="./images/html5.svg" width="8%" alt="" />
+            <img src="./images/css3.svg" width="8%" alt="" />
+            <img src="./images/javascript.svg" width="8%" alt="" />
+            <img src="./images/typescript.svg" width="8%" alt="" />
+            <img src="./images/nodedotjs.svg" width="8%" alt="" />
+            <img src="./images/angular.svg" width="8%" alt="" />
+            <img src="./images/express.svg" width="8%" alt="" />
+            <img src="./images/circleci.svg" width="8%" alt="" />
+          </div>
+        </div>
+      </section>
+      <section id="section3" data-nav="My Projects" class="your-active-class">
+        <div class="landing__container">
+          <h2 id="project-header">My Projects</h2>
+
+          <div class="project-1">
+            <h2 class="project-1-title">Hope Pin</h2>
+            <p>
+              Hope pin provides the ability to find donation boxes with ease on
+              Google maps, as well as adding them to Google firebase once they
+              are detected with artificialintelligence
+              <a
+                href="https://drive.google.com/file/d/1bF11u2Zu43fTkaTQPasvGg28M5w_1fSK/view?usp=sharing"
+                target="_blank"
+                >Demo of the project</a
+              >
+              <br />
+              <span class="project-stack">
+                Tensorflow lite Java Google maps Firebase Google
+                Directions</span
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="section4" data-nav="My Socials">
+        <div class="landing__container">
+          <h2 class="social-title">My Socials</h2>
+          <div class="socials-container">
+            <a
+              class="social-link"
+              href="https://www.linkedin.com/in/abdulmajeed-alharbi-89b959241/"
+              target="_blank"
+              ><img src="./images/linkedin.svg" alt="Linkedin Icon" width="30%"
+            /></a>
+            <a
+              class="social-link"
+              href="https://github.com/MajeedReact"
+              target="_blank"
+              ><img src="./images//github.svg" alt="Github Icon" width="30%"
+            /></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page__footer">
+      <p>&copy Udacity</p>
+    </footer>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
