@@ -12,7 +12,8 @@ This is a portfolio website project part of Udacity Frontend Nano Degree program
 - addEventListener
 - getBoundingClientRect() (to detect sections)
 - classList
-- Event Delegation
+- getAttribute
+- appendChild
 
 ## Resources 
 - [W3School attributes](https://www.w3schools.com/tags/att_data-.asp)
