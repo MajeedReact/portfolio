@@ -208,6 +208,16 @@ section {
   transition: ease 0.3s all;
 }
 
+.element__active {
+  border-top-right-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+  background-color: #778da9;
+  cursor: pointer;
+  color: #0d1b2a;
+  padding: 0.5em 1em;
+  transition: ease 0.3s all;
+}
+
 /* Header Styles */
 .page__header {
   background: #0d1b2a;
