@@ -12,4 +12,12 @@ This is a portfolio website project part of Udacity Frontend Nano Degree program
 - addEventListener
 - getBoundingClientRect() (to detect sections)
 - classList
-- Event Delegation
+- getAttribute
+- appendChild
+
+## Resources 
+- [W3School attributes](https://www.w3schools.com/tags/att_data-.asp)
+- [MDN attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute)
+- [MDN Children](https://developer.mozilla.org/en-US/docs/Web/API/Element/children)
+- [MDN ChildNodes](https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes)
+- [To check element in viewport](https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/)
